@@ -1,322 +1,221 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" itemscope itemtype="http://schema.org/freedom">
-<head>
-<meta name="google-translate-customization" content="841cbb2f7ac68e56-c7736918c48b17ea-g517e77c253acdd64-22"></meta>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>L'espol&iacute;metre</title>
-<meta name="description" content="L'espolímetre, el contador universal d'espoli espanyol a Catalunya." />
-<meta name="keywords" content="espoli, espoli fiscal, espanyaensroba, #espanyaensroba, Independencia, Catalunya, països catalans, ccn" /> 
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Coso by AprendizDeMaker</title>
+  </head>
 
-<meta property="og:title" content="L'espolímetre"/> 
-<meta property="og:type" content="cause"/> 
-<meta property="og:image" content="http://www.jordibabot.com/espolimetre.jpg"/> 
-<meta property="og:url" content="http://www.jordibabot.com/espolimetre.htm"/> 
-<meta property="og:site_name" content="L'espolímetre"/> 
-<meta property="fb:admins" content="10150313774319311"/> 
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Coso</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/AprendizDeMaker/coso/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/AprendizDeMaker/coso/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/AprendizDeMaker/coso" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <p>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "<a href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd%22%3E">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</a>
+
+</p>
+
+
+L'espolímetre
+
  
-<!-- Add the following three tags inside head -->
-<meta itemprop="name" content="L'espolímetre">
-<meta itemprop="description" content="L'espolímetre, el contador universal de l'espoli espanyol a Catalunya.">
-<meta itemprop="image" content="http://www.jordibabot.com/espolimetre.htm">
+
+<p> 
  
-<script languaje="JavaScript">
-var mesos=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-var inici_sessio = new Date();
-var valor_unitat=1;
-var unitat="€";
-var unitats="€";
-var espoli = 22000000000;
-var frase = "ens han robat";
-var avui=new Date();
-//document.write("avui"+avui);
-anyet=avui.getFullYear();
-mes_actual=mesos[avui.getMonth()];
-//document.write("mes_actual"+mes_actual);
-dia_avui=avui.getUTCDate();
-//document.write("dia_avui "+dia_avui);
-primer_dia_any = new Date("Jan 01 " + anyet + " 00:00:00");
-//document.write("primer_dia_any"+primer_dia_any);
-primer_dia_mes = new Date(mes_actual + " 01 " + anyet + " 00:00:00");
-//document.write("primer_dia_mes"+primer_dia_mes);
-primera_hora_avui = new Date(mes_actual + " " + dia_avui + " " + anyet + " 00:00:00");
+ 
+ 
+ 
+ </p>
 
-function getTime() {
-	now = new Date();
-	
-	
-	valors_enters=valor_unitat.toString().split(".")[0].length;
-	
-	
-	//days = (y2k - now) / 1000 / 60 / 60 / 24;
-	days = (now - primer_dia_any)/ 1000 / 60 / 60 / 24;
-	daysRound = Math.floor(days);
-	//hours = (y2k - now) / 1000 / 60 / 60 - (24 * daysRound);
-	hours = (now - primer_dia_any) / 1000 / 60 / 60 - (24 * daysRound);
-	hoursRound = Math.floor(hours);
-	//minutes = (y2k - now) / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
-	minutes = (now - primer_dia_any) / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
-	minutesRound = Math.floor(minutes);
-	//seconds = (y2k - now) / 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
-	seconds = (now - primer_dia_any) / 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
-	secondsRound = "0" + Math.round(seconds);
-	secondsRound = secondsRound.slice(-2);
-	
-	if (valors_enters>=1) correccio_decimal=1;
-	if (valors_enters>=3) correccio_decimal=1000;
-	if (valors_enters>=6) correccio_decimal=10000;
-	
-	var espoli_segon = (espoli / 365 / 24 / 60 / 60 ) / valor_unitat;
-	var espoli_segon_round = Math.round(espoli_segon*correccio_decimal)/correccio_decimal;
-	
-	segons_any = (now - primer_dia_any) / 1000;
-	segons_any_round = Math.round(segons_any);
-	espoli_any_portem =  Math.round(espoli_segon * segons_any *correccio_decimal)/correccio_decimal;
-	
-	segons_mes = (now - primer_dia_mes) / 1000;
-	segons_mes_round = Math.round(segons_mes);
-	espoli_mes_portem =  Math.round(espoli_segon * segons_mes *correccio_decimal)/correccio_decimal;
-	
-//	prova = "<small>(prova IE " + " now " + now + " primera_hora_avui " + primera_hora_avui;
-	segons_dia = (now - primera_hora_avui) / 1000;
-//	prova += " segons dia " + segons_dia;
-	segons_dia_round = Math.round(segons_dia);
-//	prova += " segons_dia_round " + segons_dia_round;
-	espoli_dia_portem =  Math.round(espoli_segon * segons_dia *correccio_decimal)/correccio_decimal;
-//	prova += "espoli_dia_portem" + espoli_dia_portem;
-//	prova += "</small>";
-	
-	segons_sessio = (now - inici_sessio) / 1000;
-	segons_sessio_round = Math.round(segons_sessio);
-	espoli_sessio_portem =  Math.round(espoli_segon * segons_sessio* correccio_decimal)/correccio_decimal;
 
-	sec = (secondsRound == 1) ? " segon" : " segons";
-	min = (minutesRound == 1) ? " minut" : " minuts, ";
-	hr = (hoursRound == 1) ? " hora" : " hores, ";
-	dy = (daysRound == 1) ? " dia" : " dies, "
-	document.getElementById("text1").innerHTML = "<h2 style='font-size:14px;'>Aquest any portem " + daysRound + dy + hoursRound + hr + minutesRound + min + secondsRound + sec + " d&#39;espoli fiscal espanyol (" + espoli + "€ cada any)</h2>" +
-															//" (" + segons_any_round + " segons) " +
-															" <br /> Tenint en compte que són " + canvia_a_coma(espoli_segon_round) + " " + unitats + "/segon"
-															;
-															
-	
-	document.getElementById("contador_espoli_sessio").innerHTML = humanNumber(espoli_sessio_portem) + " " + unitats /*+ " <div style='font-size:10px;'>" + posa_punts(canvia_a_coma(espoli_sessio_portem)) + "</div>"*/;
-	document.getElementById("contador_espoli_dia").innerHTML = humanNumber(espoli_dia_portem) + " " + unitats /*+ " <div style='font-size:10px;'>" + posa_punts(canvia_a_coma(espoli_dia_portem)) + "</div>"*/;
-	document.getElementById("contador_espoli_mes").innerHTML = humanNumber(espoli_mes_portem) + " " + unitats /*+ " <div style='font-size:10px;'>" + posa_punts(canvia_a_coma(espoli_mes_portem)) + "</div>"*/;
-	document.getElementById("contador_espoli_any").innerHTML = humanNumber(espoli_any_portem) + " " + unitats /*+ " <div style='font-size:10px;'>" + posa_punts(canvia_a_coma(espoli_any_portem)) + "</div>"*/;
-	document.getElementById("frase1").innerHTML = frase;
-	document.getElementById("frase2").innerHTML = frase;
-	document.getElementById("frase3").innerHTML = frase;
-	document.getElementById("frase4").innerHTML = frase;
-	newtime = window.setTimeout(getTime, 20);
-}
 
-function humanNumber(number) {
-    var parts = number.toString().split('.')
-    var integer = parts[0]
-    var decimal = parts[1]
+<p>
 
-    var humanNumber = ''
-    while (integer) {
-        if (humanNumber) humanNumber = '.' + humanNumber
-        humanNumber = integer.slice(-3) + humanNumber
-        integer = integer.slice(0, -3)
-    }
+</p>
 
-    if (decimal) humanNumber += ',' + decimal
 
-    return humanNumber
-}
 
-function canvia_a_coma(num) {
-    return num.toString().replace(".",",");
-}
 
-/*function posa_punts(num){//problema amb el primer punt
-	
-	var partentera=numstr.split(",")[0];
-	var partdecimal=numstr.split(",")[1];
-	var parts=Math.floor(partentera.length / 3);
-	var num_retornat = "";
-	for (i=0;i<parts;i++){
-		//document.writeln(partentera.length-i*3);
-		num_retornat = "."+partentera.slice((partentera.length-i*3)-3,partentera.length-i*3)+num_retornat;
-	}
-	num_retornat=partentera.slice(0,partentera.length % 3)+ num_retornat;
-//	if (partdecimal.length>0){num_retornat=num_retornat + "," + partdecimal;}
-	return num_retornat;
-}*/
-
-function posa_punts(input) {
-	var num = input.value.replace(/\./g, "");
-	if (!isNaN(num)) {
-		num = num.toString().split("").reverse().join("").replace(/(?=\d*\.?)(\d{3})/g, "$1.");
-		num = num.split("").reverse().join("").replace(/^[\.]/, "");
-		input.value = num;
-	} else {
-		input.value = input.value.replace(/[^\d\.]*/g, "");
-	}
-	return input.value;
-}
-
-</script>
-<style type="text/css">
 body,td,th {
-	font-family: "Courier New", Courier, monospace;
+    font-family: "Courier New", Courier, monospace;
 }
 h1{font-size: 24px; font-weight: bold; width:100%;}
 .contador_espoli{
-	width:100%;
-	font-size:36px;
-	font-weight:bold;
-	text-align:left;
+    width:100%;
+    font-size:36px;
+    font-weight:bold;
+    text-align:left;
 }
 #opcions{
-	font-size:12px;
+    font-size:12px;
 }
 #opcions a{margin-right:10px;}
 .frase{ float:left; position:relative;}
 #xarxes{
-	padding-top:5px;
-	padding-bottom:5px;
-	line-height:40px;
-	vertical-align:middle;
-	width:100%;
-	background-color:#DBDBDB;
+    padding-top:5px;
+    padding-bottom:5px;
+    line-height:40px;
+    vertical-align:middle;
+    width:100%;
+    background-color:#DBDBDB;
 }
 #google_translate_element{
-	position:absolute;
-	right:0px;
+    position:absolute;
+    right:0px;
 }
-</style>
-</head>
 
-<body onLoad="getTime()">
 
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'ca', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<p></p>
+
+<p></p>
+
+
 
 <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/ca_ES/all.js#xfbml=1&appId=358169617534278";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    
 
-	
+    
 <div id="google_translate_element"></div>
-<h1>L'Espolímetre: l'espoli fiscal CLAR I CATALÀ!</h1>
+<h1>
+<a id="lespolímetre-lespoli-fiscal-clar-i-catalÀ" class="anchor" href="#lespol%C3%ADmetre-lespoli-fiscal-clar-i-catal%C3%80" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>L'Espolímetre: l'espoli fiscal CLAR I CATALÀ!</h1>
 
-<small style=" font-size:11px;">(Dades extretes dels informes del <a href="http://www.ccncat.cat/espoli-fiscal" target="_blank">Cercle Catal&agrave; de Negocis</a>. Imprescindible llegir-los per copsar la magnitud de la trag&egrave;dia)</small>
-<br /><br />
+(Dades extretes dels informes del <a href="http://www.ccncat.cat/espoli-fiscal">Cercle Català de Negocis</a>. Imprescindible llegir-los per copsar la magnitud de la tragèdia)
+<br><br>
 
 
-<div id=xarxes>
-    &nbsp;Fem-ho córrer!&nbsp;
-    <a href="https://twitter.com/share" class="twitter-share-button" data-text="L'espolímetre, l'espoli clar i català!" data-via="jordibabot" data-lang="ca" data-size="large" data-hashtags="espolimetre,espanyaensroba">Tuiteja</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<div id="xarxes">
+     Fem-ho córrer! 
+    <a href="https://twitter.com/share">Tuiteja</a>
     
-    <div class="fb-like" data-href="http://www.jordibabot.com/espolimetre.htm" data-send="false" data-width="450" data-show-faces="false">
+    
+    <div>
 </div>
 
-<!-- Col·loqueu aquesta etiqueta allà on vulgueu que es renderitzi el botó +1. -->
-<g:plusone></g:plusone>
 
-<!-- Col·loqueu aquesta sol·licitud de renderització allà on ho considereu oportú. -->
-<script type="text/javascript">
-  window.___gcfg = {lang: 'ca'};
 
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
 
+
+
+
+<p></p>
 </div>
 
-<div id=text1></div>
-<div style="float:left;">Des de que has obert aquesta p&agrave;gina&nbsp;</div> <div class="frase" id=frase1></div>
-<br />
-<div class="contador_espoli" id=contador_espoli_sessio>a</div></div>
-<div style="float:left;">Amb el que portem de dia&nbsp;</div><div class="frase" id=frase2></div>
-<br />
-<div class="contador_espoli" id=contador_espoli_dia>a</div></div>
-<div style="float:left;">Amb el que portem de mes&nbsp;</div><div class="frase" id=frase3></div>
-<br />
-<div class="contador_espoli" id=contador_espoli_mes>a</div></div>
-<div style="float:left;">Amb el que portem d&#39;any&nbsp;</div><div class="frase" id=frase4></div>
-<br />
-<div class="contador_espoli" id=contador_espoli_any>a</div></div>
+<div id="text1"></div>
 
-	<br />I aix&ograve; fa anys que dura!<br />
+<div>Des de que has obert aquesta pàgina </div> <div id="frase1"></div>
 
-    
-    <br />
-    <div style="font-size:18px; font-weight:bold; color:#F00;">Per fer-ho més entenedor, ho mostrarem en:</div>
-    <div id="opcions">
-    <a href=# onclick="valor_unitat=1;unitats='€';frase='ens han robat';">Euros</a>
-	<a href=# onclick="valor_unitat=7565603;unitats='€ a cada catal&agrave;';frase='han robat';">Euros a cada catal&agrave;</a>
-    <a href=# onclick="valor_unitat=641.40;unitats='sous';frase='ens han robat';">Salari m&iacute;nim interprofessional (641,40 €)</a>
-    <a href=# onclick="valor_unitat=1000000;unitats='m€';frase='ens han robat';">Milions d&#39;Euros</a>
-    
-	<a href=# onclick="valor_unitat=1.1;unitats='Caf&egrave;s';frase='ens han robat';">Cafès (1.1€)</a>
-    <a href=# onclick="valor_unitat=15000;unitats='SEATs Ibiza';frase='ens han robat';">SEATs Ibiza (15.000€)</a>
-    <a href=# onclick="valor_unitat=35000;unitats='BMWs S&egrave;rie 3';frase='ens han robat';">BMWs S&egrave;rie 3 (35.000€)</a>
-	<br />
-	<strong>Infraestructures</strong><br />
-    <a href=# onclick="valor_unitat=7000000000;unitats='Eixos transversals';frase='hauríem pagat';">Eix transversal ferroviari Lleida-Girona 7.000.000.000€</a>
-    <a href=# onclick="valor_unitat=4000000000;unitats='L&iacute;nies';frase='hauríem pagat';">Línia orbital ferroviària Vilanova-Terrassa-Granollera-Mataró 4.000.000.000€</a>
-    <a href=# onclick="valor_unitat=708000000;unitats='Desdoblaments';frase='hauríem pagat';">Desdoblament Eix transversal 708.000.000€</a>
-    <a href=# onclick="valor_unitat=70000000;unitats='Hospitals';frase='hauríem pagat';">Nou hospital de Rub&iacute; 70.000.000€</a>
-    <a href=# onclick="valor_unitat=4000000;unitats='Centres educatius';frase='hauríem pagat';">Centres educatius 4.000.000€</a>
-    <a href=# onclick="valor_unitat=160000000;unitats='Dessalinitzadores';frase='hauríem pagat';">Dessalinitzadora Prat de Llobregat 160.000.000€</a>
-    <a href=# onclick="valor_unitat=1258000000;unitats='Terminals aeroport';frase='hauríem pagat';">Nova terminal de l&#39;aeroport de Barcelona 1.258.000.000€</a>
+<p><br></p>
 
-    <a href=# onclick="valor_unitat=200000000;unitats='Sincrotrons';frase='hauríem pagat';">Sincrotr&oacute; Alba 200.000.000€</a>
-    <a href=# onclick="valor_unitat=4800000000;unitats='Jocs Ol&iacute;mpics de Barcelona';frase='hauríem pagat';">Jocs Ol&iacute;mpics de Barcelona i transformació de la ciutat 4.800.000.000€</a>
-    <a href=# onclick="valor_unitat=473000000;unitats='Obres al port de Barcelona ';frase='hauríem pagat';">Paralitzaci&oacute; de les inversions al port de Barcelona 473.000.000€</a>
-	<br />
-	<strong>Internacional</strong><br />
-    <a href=# onclick="valor_unitat=2332000000;unitats='AVEs Madrid-Gal&iacute;cia ';frase='hauríem pagat';">AVE Madrid-Gal&iacute;cia 2.332.000.000€</a>
-    <a href=# onclick="valor_unitat=3829000000;unitats='AVEs Madrid-Extremadura ';frase='hauríem pagat';">AVE Madrid-Extremadura 3.829.000.000€</a>
-    <a href=# onclick="valor_unitat=4000000000;unitats='AVEs Madrid-Ast&uacute;ries';frase='hauríem pagat';">AVE Madrid-Ast&uacute;ries 4.000.000.000€</a>
-    <a href=# onclick="valor_unitat=8434280;unitats='cases reials';frase='hauríem pagat';">Despeses casa reial espanyola 8.434.280€</a>
-	<br />
-    <strong>Esport</strong><br />
-    <a href=# onclick="valor_unitat=300000;unitats='Primes';frase='hem pagat';">Primes a cada jugador de la selecció espanyola de futbol (en cas de guanyar) 300.000€</a><span style="color:#FF0000">(nou)</span>
-    <a href=# onclick="valor_unitat=96000000;unitats='Cristianos Ronaldos';frase='hem pagat'">Cristianos Ronaldos (96.000.000€)</a>
-    <br />
-	<strong>Actualitat</strong><br />
-    <a href=# onclick="valor_unitat=621000000;unitats='Retallades en sanitat';frase='hauríem cobert';">Retallades en sanitat 621.000.000€</a>
-    <a href=# onclick="valor_unitat=144000000;unitats='Retallades a universitats';frase='hauríem cobert';">Retallades a universitats 144.000.000€</a>
-    <a href=# onclick="valor_unitat=476000000;unitats='Retallades a infraestructures';frase='hauríem cobert';">Retallades a infraestructures 476.000.000€</a>
-    <a href=# onclick="valor_unitat=320000000;unitats='Retallades a sous dels funcionaris';frase='hauríem cobert';">Retallades a sous dels funcionaris 32.000.0000€</a>
-    <a href=# onclick="valor_unitat=37443000000;unitats='Deute acumulat de la Generalitat';frase='hauríem cobert';">Deute acumulat de la Generalitat 37.443.000.000€</a>
-	<a href=# onclick="valor_unitat=100000000000;unitats='Bankias';frase='hem rescatat';"> Rescats Bankia (100.000.000.000€)</a>
+<div id="contador_espoli_sessio">a</div>
 
-	</div>        
-<br />
-<div style="font-size:12px;" >Per dubtes, errors o suggeriments contacteu amb mi via <a href="https://www.facebook.com/jordibabot" target="_blank">Facebook</a>, <a href="https://twitter.com/jordibabot" target="_blank">Twitter</a> o via correu a <a href="mailto:jordibabot@gmail.com" target="_blank">jordibabot@gmail.com</a></div>
-    <b>Salut i Independència!</b><br />
+<div>Amb el que portem de dia </div><div id="frase2"></div>
 
-<script type="text/javascript">
+<p><br></p>
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-91218-6']);
-  _gaq.push(['_trackPageview']);
+<div id="contador_espoli_dia">a</div>
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-	
-posa_punts("20");
-</script>
-</body>
+<div>Amb el que portem de mes </div><div id="frase3"></div>
+
+<p><br></p>
+
+<div id="contador_espoli_mes">a</div>
+
+<div>Amb el que portem d'any </div><div id="frase4"></div>
+
+<p><br></p>
+
+<div id="contador_espoli_any">a</div>
+
+<pre><code>&lt;br /&gt;I aix&amp;ograve; fa anys que dura!&lt;br /&gt;
+
+
+&lt;br /&gt;
+&lt;div style="font-size:18px; font-weight:bold; color:#F00;"&gt;Per fer-ho més entenedor, ho mostrarem en:&lt;/div&gt;
+&lt;div id="opcions"&gt;
+&lt;a href=# onclick="valor_unitat=1;unitats='€';frase='ens han robat';"&gt;Euros&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=7565603;unitats='€ a cada catal&amp;agrave;';frase='han robat';"&gt;Euros a cada catal&amp;agrave;&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=641.40;unitats='sous';frase='ens han robat';"&gt;Salari m&amp;iacute;nim interprofessional (641,40 €)&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=1000000;unitats='m€';frase='ens han robat';"&gt;Milions d&amp;#39;Euros&lt;/a&gt;
+
+&lt;a href=# onclick="valor_unitat=1.1;unitats='Caf&amp;egrave;s';frase='ens han robat';"&gt;Cafès (1.1€)&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=15000;unitats='SEATs Ibiza';frase='ens han robat';"&gt;SEATs Ibiza (15.000€)&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=35000;unitats='BMWs S&amp;egrave;rie 3';frase='ens han robat';"&gt;BMWs S&amp;egrave;rie 3 (35.000€)&lt;/a&gt;
+&lt;br /&gt;
+&lt;strong&gt;Infraestructures&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=# onclick="valor_unitat=7000000000;unitats='Eixos transversals';frase='hauríem pagat';"&gt;Eix transversal ferroviari Lleida-Girona 7.000.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=4000000000;unitats='L&amp;iacute;nies';frase='hauríem pagat';"&gt;Línia orbital ferroviària Vilanova-Terrassa-Granollera-Mataró 4.000.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=708000000;unitats='Desdoblaments';frase='hauríem pagat';"&gt;Desdoblament Eix transversal 708.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=70000000;unitats='Hospitals';frase='hauríem pagat';"&gt;Nou hospital de Rub&amp;iacute; 70.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=4000000;unitats='Centres educatius';frase='hauríem pagat';"&gt;Centres educatius 4.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=160000000;unitats='Dessalinitzadores';frase='hauríem pagat';"&gt;Dessalinitzadora Prat de Llobregat 160.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=1258000000;unitats='Terminals aeroport';frase='hauríem pagat';"&gt;Nova terminal de l&amp;#39;aeroport de Barcelona 1.258.000.000€&lt;/a&gt;
+
+&lt;a href=# onclick="valor_unitat=200000000;unitats='Sincrotrons';frase='hauríem pagat';"&gt;Sincrotr&amp;oacute; Alba 200.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=4800000000;unitats='Jocs Ol&amp;iacute;mpics de Barcelona';frase='hauríem pagat';"&gt;Jocs Ol&amp;iacute;mpics de Barcelona i transformació de la ciutat 4.800.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=473000000;unitats='Obres al port de Barcelona ';frase='hauríem pagat';"&gt;Paralitzaci&amp;oacute; de les inversions al port de Barcelona 473.000.000€&lt;/a&gt;
+&lt;br /&gt;
+&lt;strong&gt;Internacional&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=# onclick="valor_unitat=2332000000;unitats='AVEs Madrid-Gal&amp;iacute;cia ';frase='hauríem pagat';"&gt;AVE Madrid-Gal&amp;iacute;cia 2.332.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=3829000000;unitats='AVEs Madrid-Extremadura ';frase='hauríem pagat';"&gt;AVE Madrid-Extremadura 3.829.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=4000000000;unitats='AVEs Madrid-Ast&amp;uacute;ries';frase='hauríem pagat';"&gt;AVE Madrid-Ast&amp;uacute;ries 4.000.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=8434280;unitats='cases reials';frase='hauríem pagat';"&gt;Despeses casa reial espanyola 8.434.280€&lt;/a&gt;
+&lt;br /&gt;
+&lt;strong&gt;Esport&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=# onclick="valor_unitat=300000;unitats='Primes';frase='hem pagat';"&gt;Primes a cada jugador de la selecció espanyola de futbol (en cas de guanyar) 300.000€&lt;/a&gt;&lt;span style="color:#FF0000"&gt;(nou)&lt;/span&gt;
+&lt;a href=# onclick="valor_unitat=96000000;unitats='Cristianos Ronaldos';frase='hem pagat'"&gt;Cristianos Ronaldos (96.000.000€)&lt;/a&gt;
+&lt;br /&gt;
+&lt;strong&gt;Actualitat&lt;/strong&gt;&lt;br /&gt;
+&lt;a href=# onclick="valor_unitat=621000000;unitats='Retallades en sanitat';frase='hauríem cobert';"&gt;Retallades en sanitat 621.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=144000000;unitats='Retallades a universitats';frase='hauríem cobert';"&gt;Retallades a universitats 144.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=476000000;unitats='Retallades a infraestructures';frase='hauríem cobert';"&gt;Retallades a infraestructures 476.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=320000000;unitats='Retallades a sous dels funcionaris';frase='hauríem cobert';"&gt;Retallades a sous dels funcionaris 32.000.0000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=37443000000;unitats='Deute acumulat de la Generalitat';frase='hauríem cobert';"&gt;Deute acumulat de la Generalitat 37.443.000.000€&lt;/a&gt;
+&lt;a href=# onclick="valor_unitat=100000000000;unitats='Bankias';frase='hem rescatat';"&gt; Rescats Bankia (100.000.000.000€)&lt;/a&gt;
+
+&lt;/div&gt;        
+</code></pre>
+
+<p><br></p>
+
+<div>Per dubtes, errors o suggeriments contacteu amb mi via <a href="https://www.facebook.com/jordibabot">Facebook</a>, <a href="https://twitter.com/jordibabot">Twitter</a> o via correu a <a href="mailto:jordibabot@gmail.com">jordibabot@gmail.com</a>
+</div>
+
+<pre><code>&lt;b&gt;Salut i Independència!&lt;/b&gt;&lt;br /&gt;
+</code></pre>
+
+
+
+<p>
+</p>
+        </section>
+
+        <footer>
+          Coso is maintained by <a href="https://github.com/AprendizDeMaker">AprendizDeMaker</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
 </html>
